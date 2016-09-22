@@ -1,0 +1,137 @@
+<md-toolbar class="md-hue-2">
+
+  <div class="md-toolbar-tools"
+       layout-align="center center">
+
+    <md-button class="md-icon-button"
+               aria-label="Menu"
+               ng-click="$ctrl.toggleSideNav()">
+      <md-icon>menu</md-icon>
+    </md-button>
+
+    <span flex></span>
+
+    <h2>
+      <span ui-sref="main" style="cursor: pointer;">Material TDB</span>
+    </h2>
+
+    <span flex></span>
+
+    <md-button class="md-icon-button"
+               aria-label="About"
+               ui-sref="about">
+      <md-icon>info</md-icon>
+    </md-button>
+
+  </div>
+
+</md-toolbar>
+
+<md-sidenav class="md-sidenav-left"
+            md-component-id="side-nav"
+            md-whiteframe="4">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools"
+         layout-align="start center">
+
+      <md-button class="md-icon-button"
+                 aria-label="Close"
+                 ng-click="$ctrl.toggleSideNav()">
+        <md-icon>keyboard_backspace</md-icon>
+      </md-button>
+
+    </div>
+  </md-toolbar>
+
+  <md-content>
+
+    <md-list flex>
+
+      <md-menu-item>
+        <span>Pages</span>
+      </md-menu-item>
+
+      <md-menu-item ng-click="$ctrl.toggleSideNav()">
+        <md-button ui-sref="main">
+          <span class="side-menu-item">Home</span>
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item ng-click="$ctrl.toggleSideNav()">
+        <md-button ui-sref="about">
+          <span class="side-menu-item">About</span>
+        </md-button>
+      </md-menu-item>
+
+      <md-divider></md-divider>
+
+      <md-menu-item>
+        <span>External</span>
+      </md-menu-item>
+
+      <md-menu-item ng-click="$ctrl.toggleSideNav()">
+        <md-button ng-href="http://github.com/RhanCandia/material-tdb" target="_blank">
+          <span class="side-menu-item">MaterialTDB Source</span>
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item ng-click="$ctrl.toggleSideNav()">
+        <md-button ng-href="http://titledb.com" target="_blank">
+          <span class="side-menu-item">Title DB</span>
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item ng-click="$ctrl.toggleSideNav()">
+        <md-button ng-href="http://shameless_inc.github.io" target="_blank">
+          <span class="side-menu-item">Title DB++</span>
+        </md-button>
+      </md-menu-item>
+
+      <md-divider></md-divider>
+
+      <md-menu-item>
+        <span>Credits</span>
+      </md-menu-item>
+
+      <md-menu-item ng-click="$ctrl.toggleSideNav()">
+        <md-button ng-href="http://reddit.com/u/codepoet82" target="_blank">
+          <span class="side-menu-item">/u/codepoet82</span>
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item ng-click="$ctrl.toggleSideNav()">
+        <md-button ng-href="http://reddit.com/u/rhancandia" target="_blank">
+          <span class="side-menu-item">/u/rhancandia</span>
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item ng-click="$ctrl.toggleSideNav()">
+        <md-button ng-href="http://reddit.com/u/shameless_inc" target="_blank">
+          <span class="side-menu-item">/u/shameless_inc</span>
+        </md-button>
+      </md-menu-item>
+
+      <md-divider></md-divider>
+
+      <md-menu-item>
+        <span>Disclamer</span>
+      </md-menu-item>
+
+      <md-content layout-padding>
+        <span class="side-menu-item">All extracted graphics, logos, and trademarks are property of their respective owners.</span>
+      </md-content>
+
+      <md-content layout-padding>
+        <span class="side-menu-item">Material TDB is developed and maintained by <a href="http://reddit.com/u/rhancandia">/u/rhancandia</a>.</span>
+      </md-content>
+
+      <md-content layout-padding>
+        <span class="side-menu-item">Material TDB wouldn't be possible if not for <a href="http://reddit.com/u/codepoet82">/u/codepoet82</a>'s TitleDB API.</span>
+      </md-content>
+
+    </md-list>
+
+  </md-content>
+
+</md-sidenav>

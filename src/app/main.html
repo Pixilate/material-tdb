@@ -1,0 +1,60 @@
+<md-progress-linear md-mode="query" ng-hide="$ctrl.titleCount()"></md-progress-linear>
+
+<md-content id="main-content" layout-padding
+            layout="row" layout-xs="column" layout-wrap>
+
+  <div flex="100">
+    <md-whiteframe id="search-frame" class="md-whiteframe-1dp" layout-fill layout layout-align="center center">
+      <md-input-container flex="95">
+        <md-icon>search</md-icon>
+        <label>Search</label>
+        <input type="search" ng-model="search">
+      </md-input-container>
+    </md-whiteframe>
+  </div>
+
+  <div flex="25" flex-xs="100"
+       class="animate-repeat"
+       ng-repeat="title in $ctrl.titles | orderBy:'name' | filter:search">
+    <md-card layout-fill>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{ title.name }}</span>
+          <span class="md-subhead">{{ title.author }}</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-sm card-media"><img ng-src="https://api.titledb.com/images/{{ title.titleid }}.png" alt=""></div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-content>
+        <p>{{ title.description }}</p>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="$ctrl.generateQr($event, title)"
+                   class="md-no-focus">QR Code</md-button>
+        <md-button ng-href="{{ title.url }}"
+                   target="_blank"
+                   class="md-no-focus">Download</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+
+</md-content>
+
+<div style="visibility: hidden">
+  <div class="md-dialog-container" id="qr-dialog">
+    <md-dialog layout-padding>
+      <md-dialog-content>
+        <h2 id="title-name"></h2>
+        <div id="title-qr-wrapper">
+
+        </div>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button ng-click="$ctrl.closeDialog()"
+                   class="md-no-focus"
+                   style="background-color: transparent;">Dismiss QR</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+  </div>
+</div>
