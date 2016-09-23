@@ -32,13 +32,7 @@ angular
           text: 'https://api.titledb.com/v0/proxy/' + title.titleid,
           rounded: 80,
           quiet: 0,
-          mode: 'label',
-          mSize: 14,
-          mPosX: 50,
-          mPosY: 50,
-          label: 'Material TDB',
-          fontname: 'Ubuntu',
-          fontcolor: 'rgb(40,53,147)'
+          mode: 'plain'
         });
 
         angular.element($document[0].querySelector('#title-name')).empty().text(title.name);
