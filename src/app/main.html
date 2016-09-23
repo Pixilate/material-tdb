@@ -39,22 +39,22 @@
     </md-card>
   </div>
 
-</md-content>
+  <div style="visibility: hidden">
+    <div class="md-dialog-container" id="qr-dialog">
+      <md-dialog layout-padding>
+        <md-dialog-content>
+          <h2 id="title-name"></h2>
+          <div id="title-qr-wrapper">
 
-<div style="visibility: hidden">
-  <div class="md-dialog-container" id="qr-dialog">
-    <md-dialog layout-padding>
-      <md-dialog-content>
-        <h2 id="title-name"></h2>
-        <div id="title-qr-wrapper">
-
-        </div>
-      </md-dialog-content>
-      <md-dialog-actions>
-        <md-button ng-click="$ctrl.closeDialog()"
-                   class="md-no-focus"
-                   style="background-color: transparent;">Dismiss QR</md-button>
-      </md-dialog-actions>
-    </md-dialog>
+          </div>
+        </md-dialog-content>
+        <md-dialog-actions>
+          <md-button ng-click="$ctrl.closeDialog()"
+                     class="md-no-focus"
+                     style="background-color: transparent;">Dismiss QR</md-button>
+        </md-dialog-actions>
+      </md-dialog>
+    </div>
   </div>
-</div>
+
+</md-content>

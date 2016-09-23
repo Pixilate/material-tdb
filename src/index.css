@@ -1,6 +1,9 @@
 body {
   background-color: #eee;
-  overflow: auto;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 #main-content {

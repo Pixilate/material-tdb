@@ -10,15 +10,11 @@ angular
         var $body = angular.element($document[0].body);
 
         if ($mdSidenav('side-nav').isOpen()) {
-            $body.css({
-              'overflow': 'hidden'
-            });
+          $body.addClass('no-scroll');
         }
 
         $mdSidenav('side-nav').onClose(function () {
-          $body.css({
-            'overflow': 'auto'
-          });
+          $body.removeClass('no-scroll');
         });
       };
     }

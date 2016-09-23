@@ -1,3 +1,5 @@
+var kjua;
+
 angular
   .module('app')
   .component('main', {
