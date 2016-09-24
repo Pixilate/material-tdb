@@ -8,6 +8,7 @@ body {
 
 #main-content {
   background-color: transparent;
+  overflow-x: hidden;
 }
 
 .side-menu-item {
@@ -47,4 +48,13 @@ body {
 .animate-repeat.ng-move.ng-move-active,
 .animate-repeat.ng-enter.ng-enter-active {
   opacity: 1;
+}
+
+@media screen and (max-device-width: 600px) {
+
+  #title-qr-wrapper > canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+
 }

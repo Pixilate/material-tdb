@@ -13,7 +13,7 @@
     </md-whiteframe>
   </div>
 
-  <div flex="25" flex-xs="100"
+  <div flex="25" flex-xs="100" flex-sm="33"
        class="animate-repeat"
        ng-repeat="title in $ctrl.titles | orderBy:'name' | filter:search">
     <md-card layout-fill>
@@ -23,7 +23,7 @@
           <span class="md-subhead">{{ title.author }}</span>
         </md-card-title-text>
         <md-card-title-media>
-          <div class="md-media-sm card-media"><img ng-src="https://api.titledb.com/images/{{ title.titleid }}.png" alt=""></div>
+          <div class="md-media-sm card-media"><img id="ico-{{ title.titleid }}" ng-src="https://api.titledb.com/images/{{ title.titleid }}.png" alt=""></div>
         </md-card-title-media>
       </md-card-title>
       <md-card-content>

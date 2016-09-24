@@ -21,6 +21,8 @@ angular
           clickOutsideToClose: true
         });
 
+        var ico = $document[0].getElementById('ico-' + title.titleid);
+
         var qrCode = kjua({
           render: 'canvas',
           crisp: true,
@@ -32,7 +34,11 @@ angular
           text: 'https://api.titledb.com/v0/proxy/' + title.titleid,
           rounded: 80,
           quiet: 0,
-          mode: 'plain'
+          mode: 'image',
+          mSize: 30,
+          mPosX: 50,
+          mPosY: 50,
+          image: ico
         });
 
         angular.element($document[0].querySelector('#title-name')).empty().text(title.name);
